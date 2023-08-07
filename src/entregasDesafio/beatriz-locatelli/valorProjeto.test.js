@@ -23,7 +23,7 @@ describe('valor total do projeto', () => {
         expect(resultado).toEqual(3696)
     });
 
-    test('deve calcular o valor total do projeto de pacote intermediário de acordo com as funcionalidades passadas', () => {
+    test('retorno valor total do projeto do pacote intermediário de acordo com as funcionalidades passadas', () => {
         pacote.calcularPacote.mockReturnValue('pacote_intermediario');
         const funcionalidades = [
             'setup',
@@ -39,7 +39,7 @@ describe('valor total do projeto', () => {
         expect(resultado).toEqual(6854);
     });
 
-    test('deve calcular o valor total do projeto pacote premium de acordo com as funcionalidades passadas', () => {
+    test('retorno valor total do projeto do pacote premium de acordo com as funcionalidades passadas', () => {
         pacote.calcularPacote.mockReturnValue('pacote_premium');
         const funcionalidades = [
             'setup',
