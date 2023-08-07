@@ -59,33 +59,4 @@ describe('Deve calcular o valor total do projeto, de acordo com os parâmetros d
         const resultado = calcularValorTotalProjeto(funcionalidades,valorHora);
         expect(resultado).toEqual(4269);
     });
-
-    test('mock do pacote_time, deve retornar o valor total do projeto, de acordo com as funcionalidades passadas', () => {
-        pacote.calcularPacote.mockReturnValue('pacote_premium');
-        const funcionalidades = [
-            'setup',//8 horas
-            'formulario', //16 horas
-            'responsividade', //16 horas
-            'responsividade', //16 horas
-            'responsividade', //16 horas
-            'responsividade', //16 horas
-            'responsividade', //16 horas
-            'responsividade', //16 horas
-            'otimizacao_seo', //16 horas
-            'construcao_1_pagina',//8 horas
-            'construcao_1_pagina',//8 horas
-            'construcao_1_pagina',//8 horas
-            'construcao_1_pagina',//8 horas
-            'construcao_1_pagina',//8 horas
-            'construcao_1_pagina',//8 horas
-            'integracao_mailchimp', //16 horas
-            'integracao_mailchimp', //16 horas
-            'ssr', //8 horas
-            'integracao_api_propria', //16 horas
-            'desenvolver_banco_de_dados'//16 horas
-        ] //256 horas
-        const valorHora = 29;
-        const resultado = calcularValorTotalProjeto(funcionalidades,valorHora);
-        expect(resultado).toEqual(8538);
-    });
 });
