@@ -13,4 +13,17 @@ describe('valor por hora', () => {
         expect(resultado).toEqual(29);
 
     });
+
+    test('retorno deve ser 0 se não for informado nenhum valor', 
+    () => {
+        // arrange / setup
+        const valorMes = ""; 
+
+        // act / ação
+        const resultado = calcularValorPorHora(valorMes);
+
+        // assert / verificação
+        expect(resultado).toEqual(0);
+
+    });
 });
